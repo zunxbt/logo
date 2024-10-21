@@ -2,7 +2,8 @@
 
 check_and_install_pv() {
     if ! command -v pv &> /dev/null; then
-        sudo apt-get install pv -y > /dev/null 2>&1
+        sudo apt update -y > /dev/null 2>&1
+        sudo apt install pv -y > /dev/null 2>&1
     fi
 }
 
